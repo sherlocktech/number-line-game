@@ -38,4 +38,8 @@ function NumberLine(x1, y, x2, intervalLength, numberAtCenter, p5) {
         p5.line(x, y, x + p5.cos(angle + -0.25 * p5.PI)*size, y + p5.sin(angle + -0.25 * p5.PI)*size);
         p5.line(x, y, x + p5.cos(angle + 0.25 * p5.PI)*size, y + p5.sin(angle + 0.25 * p5.PI)*size);
     }
+    
+    this.length = function() {
+        return x2 - x1;
+    }
 }

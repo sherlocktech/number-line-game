@@ -1,3 +1,60 @@
+//constructs a Line from (x1, y1) to (x2, y2)
+function Line(x1, y1, x2, y2, p5) {
+    this.draw = function() {
+        p5.line(x1, y1, x2, y2);
+    }
+    
+    this.translate = function(dx, dy) {
+        x1 += dx;
+        x2 += dx;
+        y1 += dy;
+        y2 += dy;
+    }
+    
+    this.length = function() {
+        return p5.dist(x1, y1, x2, y2);
+    }
+    
+    this.getX1 = function() {
+        return x1;
+    }
+    this.setX1 = function(_x1) {
+        x1 = _x1;
+    }
+    this.getY1 = function() {
+        return y1;
+    }
+    this.setY1 = function(_y1) {
+        y1 = _y1;
+    }
+    this.getX2 = function() {
+        return x2;
+    }
+    this.setX2 = function(_x2) {
+        x2 = _x2;
+    }
+    this.getY2 = function() {
+        return y2;
+    }
+    this.setY2 = function(_y2) {
+        y2 = _y2;
+    }
+}
+
+function Point(x, y, p5) {
+    this.x = x;
+    this.y = y;
+    
+    this.draw = function() {
+        p5.point(this.x, this.y);
+    }
+    
+    this.translate = function(dx, dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+}
+
 //constructs a Rect (rectangle) with 4 positioning parameters (a, b, c, & d) which have different meanings depending on the rectMode variable given.
 //The way this rectMode variable is used mirrors the p5 function named rectMode().
 //see http://p5js.org/reference/#/p5/rectMode for more information about the rectMode() function.
