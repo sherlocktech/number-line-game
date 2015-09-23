@@ -38,6 +38,12 @@ var init = function (p5) {
             spark.translate(spark_dx, 0);
         }
 	};
+	p5.keyPressed = function () {
+        	if (p5.keyCode === p5.UP_ARROW) {
+            		p5.noLoop();
+    
+        	}
+    	}; 
 };
 
 var myp5 = new p5 (init);
