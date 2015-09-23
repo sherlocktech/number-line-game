@@ -24,6 +24,7 @@ var init = function (p5) {
             p5.strokeWeight(2);
             p5.stroke(255, 160, 0);
             rope.draw();
+            p5.println(rope.length());
 
             p5.strokeWeight(4);
             p5.stroke(100, 0, 0);
@@ -32,7 +33,7 @@ var init = function (p5) {
         
         //animate rope and spark:
         if (rope.length() > 0) {
-            rope.setX2(rope.getY2() - spark_dx);
+            rope.setX2(rope.getX2() - spark_dx);
             rope.translate(spark_dx, 0);
             spark.translate(spark_dx, 0);
         }
