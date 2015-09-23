@@ -4,7 +4,7 @@
 function Rect(a, b, c, d, rectMode, p5) {
     var cenx, ceny, width, height;
     
-    constructor = function(a, b, c, d, rectMode) {
+    (function constructor(a, b, c, d, rectMode) {
         if (rectMode == p5.CORNER) {
             width = c;
             height = d;
@@ -30,9 +30,9 @@ function Rect(a, b, c, d, rectMode, p5) {
             width = c/2.0;
             height = d/2.0;
         }
-    }
+    }(a, b, c, d, rectMode));
     
-    constructor(a, b, c, d, rectMode);
+    
     
     //draws rect
     this.draw = function() {
