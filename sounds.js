@@ -1,5 +1,5 @@
-var mySound;
-p5.prototype.registerPreloadMethod('loadSound', p5);
+
+
 
 function loadSound(path, callback, whileLoading) {
     'use strict';
@@ -11,13 +11,4 @@ function loadSound(path, callback, whileLoading) {
     return s;
 }
 
-function preload() {
-    'use strict';
-    mySound = loadSound('Sound/Fire.mp3');
-}
 
-function setup() {
-    'use strict';
-    mySound.setVolume(0.1);
-    mySound.play();
-}

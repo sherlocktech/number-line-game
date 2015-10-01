@@ -15,10 +15,7 @@ function construct(constructor, args) {
     return new F();
 }
 
-p5.prototype.loadAnimation = function () {
-    'use strict';
-    return construct(Animation, arguments);
-};
+
 
 function preload() {
     'use strict';
