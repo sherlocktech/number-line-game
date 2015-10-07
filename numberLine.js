@@ -26,6 +26,10 @@ function NumberLine(x1, y, x2, intervalLength, numberAtCenter, p5) {
             distFromCen += intervalLength;
             i++;
         }
+
+			this.getIntervalBound = function() {
+				return i;
+			}
     }
     
     function drawLabel(num, label_x, label_y) {
