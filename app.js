@@ -4,15 +4,17 @@ var init = function (p5) {
     var spark; //our spark is a point
     var spark_dx; //change in spark location per frame
 
+		var cenNum = 0; // Number at center of number line
 
 	//p5.setup runs once before p5.draw is run
 	p5.setup  = function () {
 		p5.createCanvas(600, 600);
-        numberLine = new NumberLine(0, p5.height/2, p5.width, 40, 0, p5);
-        rope = new Line(0, 300, numberLine.length(), 300, p5);
-        spark = new Point(0, 300, p5);
-        spark_dx = 1;
-        this.mySound = loadSound('Sound/Fire.mp3');
+		numberLine = new NumberLine(0, p5.height/2, p5.width, 40, cenNum, p5);
+		problemGenerator(cenNum, numberLine.getIntervalBound, p5);
+		rope = new Line(0, 300, numberLine.length(), 300, p5);
+		spark = new Point(0, 300, p5);
+		spark_dx = 1;
+		this.mySound = loadSound('Sound/Fire.mp3');
 
 	};
 
