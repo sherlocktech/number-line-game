@@ -6,7 +6,7 @@ function problemGenerator (cenNum, bounds, p5) {
 	var l = cenNum - bounds; // lower bound of numberLine
 	var u = cenNum + bounds; // upper bound of numberLine
 
-	c = random(l, u);
-	a = random(l - bounds, u + bounds);
+	c = p5.random(l, u);
+	a = p5.random(l - bounds, u + bounds);
 	b = (a - c) * -1;
 }

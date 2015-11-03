@@ -3,9 +3,8 @@ var init = function (p5) {
     var rope; //our rope is a line
     var spark; //our spark is a point
     var spark_dx; //change in spark location per frame
-
-		var cenNum = 0; // Number at center of number line
-
+    var cenNum = 0; // Number at center of number line
+    
 	//p5.setup runs once before p5.draw is run
 	p5.setup  = function () {
 		p5.createCanvas(600, 600);
@@ -14,8 +13,6 @@ var init = function (p5) {
 		rope = new Line(0, 300, numberLine.length(), 300, p5);
 		spark = new Point(0, 300, p5);
 		spark_dx = 1;
-		this.mySound = loadSound('Sound/Fire.mp3');
-
 	};
 
     //p5.draw runs every frame by default
@@ -50,12 +47,6 @@ var init = function (p5) {
     
         	}
     	};
-    p5.prototype.loadAnimation = function () {
-    'use strict';
-    return construct(Animation, arguments);
-};
-
-p5.prototype.registerPreloadMethod('loadSound', p5);
 };
 
 var myp5 = new p5 (init);
