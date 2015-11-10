@@ -2,6 +2,7 @@
 //The intervalLength defines the distance between consecutive numbers on the line.
 //numberAtCenter defines the number drawn in the middle of the line
 function NumberLine(x1, y, x2, intervalLength, numberAtCenter, p5) {
+    
     //draws number line
     this.draw = function() {
         //draw line:
@@ -27,9 +28,9 @@ function NumberLine(x1, y, x2, intervalLength, numberAtCenter, p5) {
             i++;
         }
 
-			this.getIntervalBound = function() {
-				return i;
-			}
+        this.getIntervalBound = function() {
+            return i;
+        }
     }
     
     function drawLabel(num, label_x, label_y) {
