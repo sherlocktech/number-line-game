@@ -1,4 +1,4 @@
-var init = function (p5) {
+function app(p5) {
     var numberLine;
     var rope; //our rope is a line
     var spark; //our spark is a point
@@ -66,5 +66,3 @@ var init = function (p5) {
         	}
     	};
 };
-
-var myp5 = new p5 (init);
