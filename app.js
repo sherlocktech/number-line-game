@@ -2,6 +2,10 @@ var init = function (p5) {
     var numberLine;
     var rope; //our rope is a line
     var spark; //our spark is a point
+		var backgroundImg; //background image
+		p5.preload = function(){
+			backgroundImg = loadImage("GamePlayAndMenuBackground.png");
+		}
     var spark_dx; //change in spark location per frame
     var cenNum = 0; // Number at center of number line
     
@@ -25,7 +29,7 @@ var init = function (p5) {
 
     //p5.draw runs every frame by default
 	p5.draw = function () {
-		p5.background(255);
+		p5.image(backgroundImg, 0, 0);
         
         p5.fill(0);
         p5.textSize(32);
