@@ -17,6 +17,6 @@ function help(p) {
     p.mouseClicked = function() {
         canvas.remove();
         p.remove();
-        new p5(menueScreen);
+        new p5(menuScreen);
     };
 }
