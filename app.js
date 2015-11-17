@@ -4,7 +4,7 @@ function app(p5) {
     var spark; //our spark is a point
 		var backgroundImg; //background image
 		p5.preload = function(){
-			backgroundImg = loadImage("GamePlayAndMenuBackground.png");
+			backgroundImg = p5.loadImage("animation/GamePlayAndMenuBackground.png");
 		}
     var spark_dx; //change in spark location per frame
     var cenNum = 0; // Number at center of number line
