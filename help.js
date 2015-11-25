@@ -1,7 +1,7 @@
 function help(p) {
     var canvas, img;
     p.preload = function() {
-        img = p.loadImage("animation/helpMenu.png");
+        img = p.loadImage("animation/HelpScreen.png");
         canvas = p.createCanvas(600, 600);
     };
     
