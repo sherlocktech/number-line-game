@@ -61,8 +61,8 @@ function app(p5) {
 	};
 	p5.keyPressed = function () {
         	if (p5.keyCode === p5.UP_ARROW) {
-            		p5.noLoop();
+                p5.setup();
     
         	}
-    	};
-};
+    };
+}
